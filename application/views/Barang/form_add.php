@@ -38,7 +38,8 @@
       <form method="POST" action="<?php echo base_url('barang/insert'); ?>">
       <div class="form-group">
       <label for="kode_barang">Kode Barang:</label>
-      <input type="text" class="form-control" name="kode_barang" id="kode_barang" placeholder="Kode Barang" required>
+      <input type="text" class="form-control" name="kode_barang" id="kode_barang" placeholder="Kode Barang" required oninvalid="this.setCustomValidity('Masukan Kode Barang Anda')"
+    oninput="this.setCustomValidity('')">
       </div>
 
       <div class="form-group">

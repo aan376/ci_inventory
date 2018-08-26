@@ -61,23 +61,18 @@
             </div>
           </div>
         </div>
-      </div>
 
-      <div class="center">
-      <div class="col-xl-3 col-sm-6 mb-3">
+        <div class="col-xl-3 col-sm-6 mb-3">
           <div class="card text-white bg-success o-hidden h-100">
             <div class="card-body">
               <div class="card-body-icon">
                 <i class="fa fa-book"></i>
               </div>
               <div class="mr-5">Jumlah Barang = <?php echo $barang ?></div>
-              </div>
-             </div>
-             </div>
-             </div>
+            </div>
+          </div>
+        </div>
 
-
-        <div class="center">
         <div class="col-xl-3 col-sm-6 mb-3">
           <div class="card text-white bg-primary o-hidden h-100">
             <div class="card-body">
@@ -88,6 +83,16 @@
                   </div>
                   </div>
                   </div>
+
+      </div>
+
+      <div class="center">
+
+      </div>
+
+
+        <div class="center">
+        
       
       <!-- Area Chart Example-->
      
