@@ -14,6 +14,11 @@
   <link href="<?php echo base_url('asset/vendor/') ?>font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
   <!-- Custom styles for this template-->
   <link href="<?php echo base_url('asset/')?>css/sb-admin.css" rel="stylesheet">
+
+  <!-- Datatable CSS -->
+  <link rel="stylesheet" type="text/css" href="//cdn.datatables.net/1.10.19/css/jquery.dataTables.min.css">
+  <!-- Datatable CSS -->
+
 </head>
 
 <body class="fixed-nav sticky-footer bg-dark" id="page-top">
@@ -33,8 +38,9 @@
       <div>
       <a class="btn btn-info" href="<?php echo base_url('inventory/add'); ?>">Add(+)</a>
       <br><br>
-      <table class="table table-striped table-bordered table-hover">
-        <tr>
+      <table id="data_table" class="table table-striped table-bordered table-hover">
+        <thead>
+        <tr style="background-color: lightgreen">
           <th>No</th>
           <th>Kode Barang</th>
           <th>Nama Barang</th>
@@ -45,7 +51,9 @@
           <th>Jumlah Stok</th>
           <th>Action</th>
         </tr>
+        </thead>
 
+        <tbody>
         <?php foreach ($inventory as $key => $value): ?>
           <tr>
             <td><?php echo $key+1 ?></td>
@@ -64,6 +72,7 @@
             </td>
           </tr>
         <?php endforeach ?>
+        </tbody>
 
       </table>  
       </div>
@@ -105,6 +114,18 @@
     <script src="<?php echo base_url('asset/')?>js/sb-admin.min.js"></script>
     <!-- Custom scripts for this page-->
     <script src="<?php echo base_url('asset/')?>js/sb-admin-charts.min.js"></script>
+    
+    <!-- Datatable JS -->
+    <script type="text/javascript" src="//cdn.datatables.net/1.10.19/js/jquery.dataTables.min.js"></script>
+    <!-- Datatable JS -->
+
+    <script type="text/javascript">
+      $(document).ready(function() {
+        $('#data_table').DataTable();
+      });
+    </script>
+
+
   </div>
 </body>
 
